@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/styles.css"> 
     <meta charset="UTF-8">
     <title>Personal Online CV</title>
     <style>
@@ -10,19 +11,23 @@
         }
 
         header, main, footer {
-            border: 1px solid #000; /* Thin border line */
             padding: 15px;
             margin-bottom: 20px;
+        }
+
+        #education {
+            padding: 15px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            border: 1px solid #000; /* Thin border line */
+            border: 1px solid #000; /* Outer border */
         }
 
-        table th, table td {
-            border: 1px solid #000; /* Thin border line */
+        table th,
+        table td {
+            border: 1px solid #000; /* Row & column borders */
             padding: 8px;
             text-align: left;
         }
@@ -36,7 +41,7 @@
         form input, form textarea {
             width: 100%;
             padding: 8px;
-            border: 1px solid #000; /* Thin border line */
+            border: 1px solid #000; 
             margin-bottom: 10px;
         }
     </style>
@@ -48,7 +53,8 @@
     </header>
 
     <main>
-        <section>
+        <div class="container">
+        <section class="card">
             <h2>About Me</h2>
             <img src="image/profile.png" alt="Profile photo">
             <p>Email:
@@ -69,7 +75,7 @@
             </p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Education</h2>
             <table>
                 <tr>
@@ -105,7 +111,7 @@
             </table>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Skills</h2>
             <ul>
                 <li>HTML</li>
@@ -126,7 +132,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Contact Me</h2>
             <form>
                 <input type="text" placeholder="Name" required>
@@ -135,6 +141,7 @@
                 <button type="submit">Send</button>
             </form>
         </section>
+        </div>
     </main>
 
     <footer>
