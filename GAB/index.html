@@ -1,71 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">Submit</button>
-<title>Personal Online CV</title>
+    <meta charset="UTF-8">
+    <title>Personal Online CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header, main, footer {
+            border: 1px solid #000; /* Thin border line */
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000; /* Thin border line */
+        }
+
+        table th, table td {
+            border: 1px solid #000; /* Thin border line */
+            padding: 8px;
+            text-align: left;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #000; /* Thin border line */
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1>Isaiah Gabrille Bugtong</h1>
+        <p>IT Student | Web Systems and Technologies</p>
+    </header>
+
+    <main>
         <section>
-<h1>Isaiah Gabrille Bugtong</h1>
-<p> IT Student | Web Systems and Technologies </p>
-</header>
-<main>
-    <section>
-<h2>About Me</h2>
-<img src="image/profile.png" alt="Profile photo">
-<p>Email:
-<a href="mailto:bugtong.isaiahgabrille@gmail.com">bugtong.isaiahgabrille@gmail.com</a><br>
-GitHub:
-<a href="https://https://github.com/bugtongisaiahgabrille-ai" target="_blank">https://github.com/bugtongisaiahgabrille-ai</a>
-<p> Hi, good day everyone. My name is Isaiah Gabrille Bugtong. I am an Information Technology student, and I am new to this field with no prior background in IT. I am here to learn the basics, improve my skills, and understand how technology works. I am willing to learn, practice, and do my best in this course. Thank you.</p>
-</section>
-</section>
-<h2>Education</h2>
-<table>
-<tr>
-<th>Program</th>
-<th>Institution</th>
-<th>Year Graduated</th>
-</tr>
-<tr>
-<th>College</th>
-<th>USTP – CDO Campus</th>
-<th>2028</th>
-</tr>
-</table>
-</section>
-<section>
-<h2>Skills</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-</ul>
-<ul>
-<li>Web Development</li>
-<ul>
-<li>Frontend</li>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<ul>
-<li>Backend</li>
-</ul>
-</section>
-<section>
-<h2>Contact Me</h2>
-<form>
-<input type="text" placeholder="Name"><br><br>
-<input type="email" placeholder="Email"><br><br>
-<textarea placeholder="Message"></textarea><br><br>
-<button type="submit">Send</button>
-</form>
-</section>
-</main>
-<footer>
-    <p>&copy; 2026 Isaiah Gabrille Bugtong. All rights reserved. </p>
-</footer>
+            <h2>About Me</h2>
+            <img src="image/profile.png" alt="Profile photo">
+            <p>Email:
+                <a href="mailto:bugtong.isaiahgabrille@gmail.com">
+                    bugtong.isaiahgabrille@gmail.com
+                </a>
+            </p>
+            <p>GitHub:
+                <a href="https://github.com/bugtongisaiahgabrille-ai" target="_blank">
+                    https://github.com/bugtongisaiahgabrille-ai
+                </a>
+            </p>
+            <p>
+                Hi, good day everyone. My name is Isaiah Gabrille Bugtong. I am an Information Technology student,
+                and I am new to this field with no prior background in IT. I am here to learn the basics,
+                improve my skills, and understand how technology works. I am willing to learn, practice,
+                and do my best in this course. Thank you.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <table>
+                <tr>
+                    <th>Program</th>
+                    <th>Institution</th>
+                    <th>Year Graduated</th>
+                </tr>
+                <tr>
+                    <td>Kindergarten</td>
+                    <td>Macasandig Kindergarten</td>
+                    <td>2012</td>
+                </tr>
+                <tr>
+                    <td>Elementary</td>
+                    <td>Macasandig Elementary School</td>
+                    <td>2018</td>
+                </tr>
+                <tr>
+                    <td>Junior High School</td>
+                    <td>Macasandig National High School</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Senior High School</td>
+                    <td>PHINMA Cagayan de Oro College</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>College</td>
+                    <td>USTP – CDO Campus</td>
+                    <td>2028 (Expected)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Web Development
+                    <ul>
+                        <li>Frontend
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </li>
+                        <li>Backend</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Isaiah Gabrille Bugtong. All rights reserved.</p>
+    </footer>
 </body>
 </html>
