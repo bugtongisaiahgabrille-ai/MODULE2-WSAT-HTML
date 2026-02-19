@@ -50,6 +50,8 @@
     <header>
         <h1>Isaiah Gabrille Bugtong</h1>
         <p>IT Student | Web Systems and Technologies</p>
+
+        <button id="themeToggle"> Dark Mode</button>
     </header>
 
     <main>
@@ -74,7 +76,6 @@
                 and do my best in this course. Thank you.
             </p>
         </section>
-
         <section class="card">
             <h2>Education</h2>
             <table>
@@ -109,9 +110,11 @@
                     <td>2028 (Expected)</td>
                 </tr>
             </table>
-        </section>
+        </section> 
 
-        <section class="card">
+        <button id="toggleSkills">Show/Hide Skills</button>
+
+        <section class="card" id="skillsSection">
             <h2>Skills</h2>
             <ul>
                 <li>HTML</li>
@@ -135,10 +138,11 @@
         <section class="card">
             <h2>Contact Me</h2>
             <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
+                <input type="text" id="name" placeholder="Name"> 
+                <input type="email" id="email" placeholder="Email">
                 <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" id="submitBtn">Send</button>
+
             </form>
         </section>
         </div>
@@ -147,5 +151,6 @@
     <footer>
         <p>&copy; 2026 Isaiah Gabrille Bugtong. All rights reserved.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

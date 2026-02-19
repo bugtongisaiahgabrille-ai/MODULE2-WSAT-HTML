@@ -78,3 +78,12 @@ cursor: pointer;
 button:hover {
 background-color: #005fa3;
 }
+
+.dark-mode {
+ background-color:#222;
+ color:black;
+}
+
+.hidden {
+ display:none;
+}
