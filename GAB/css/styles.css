@@ -87,3 +87,7 @@ background-color: #005fa3;
 .hidden {
  display:none;
 }
+.dark-mode header{
+ background-color:#222;
+ color:rgb(255, 255, 255);
+}
