@@ -13,6 +13,11 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages 
+      url: ${{ steps.development.outputs.pages_url }}
+
     defaults:
       run:
         working-directory: personal-cv-react   # 👈 change if folder name is different
@@ -35,4 +40,6 @@ jobs:
         with:
           path: personal-cv-react/dist
 
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to Github Pages
+        id: deployment
+       uses: actions/deploy-pages@v4
