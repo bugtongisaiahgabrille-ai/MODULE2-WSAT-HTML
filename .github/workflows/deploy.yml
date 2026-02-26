@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: github-pages 
-      url: ${{ steps.development.outputs.pages_url }}
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     defaults:
       run:
-        working-directory: personal-cv-react   # 👈 change if folder name is different
+        working-directory: personal-cv-react
 
     steps:
       - uses: actions/checkout@v4
@@ -40,6 +40,6 @@ jobs:
         with:
           path: personal-cv-react/dist
 
-      - name: Deploy to Github Pages
+      - name: Deploy to GitHub Pages
         id: deployment
-       uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4
