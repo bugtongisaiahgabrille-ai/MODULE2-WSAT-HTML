@@ -1,81 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css"> 
     <meta charset="UTF-8">
     <title>Personal Online CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        header, main, footer {
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-
-        #education {
-            padding: 15px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #000; /* Outer border */
-        }
-
-        table th,
-        table td {
-            border: 1px solid #000; /* Row & column borders */
-            padding: 8px;
-            text-align: left;
-        }
-
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #000; 
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Isaiah Gabrille Bugtong</h1>
-        <p>IT Student | Web Systems and Technologies</p>
 
-        <button id="themeToggle"> Dark Mode</button>
-    </header>
+<header>
+    <h1>Isaiah Gabrille Bugtong</h1>
+    <p>IT Student | Web Systems and Technologies</p>
+    <button id="themeToggle">Dark Mode</button>
+</header>
 
-    <main>
-        <div class="container">
+<main>
+    <div class="container">
+
+        <!-- ABOUT ME -->
         <section class="card">
             <h2>About Me</h2>
-            <img src="image/profile.png" alt="Profile photo">
+
+            <div class="profile-container">
+                <img src="image/profile.png" alt="Profile photo" class="profile-pic">
+            </div>
+
             <p>Email:
                 <a href="mailto:bugtong.isaiahgabrille@gmail.com">
                     bugtong.isaiahgabrille@gmail.com
                 </a>
             </p>
-            <p>GitHub:
+
+            <p class="github-link">
+                GitHub:
                 <a href="https://github.com/bugtongisaiahgabrille-ai" target="_blank">
                     https://github.com/bugtongisaiahgabrille-ai
                 </a>
             </p>
-            <p>
-                Hi, good day everyone. My name is Isaiah Gabrille Bugtong. I am an Information Technology student,
-                and I am new to this field with no prior background in IT. I am here to learn the basics,
-                improve my skills, and understand how technology works. I am willing to learn, practice,
-                and do my best in this course. Thank you.
+
+            <!-- Added spacing class here -->
+            <p class="about-text">
+                Hi, good day everyone. My name is Isaiah Gabrille Bugtong.
+                I am an Information Technology student learning web development.
+                I am improving my skills in HTML, CSS, and JavaScript.
             </p>
         </section>
+
+        <!-- EDUCATION -->
         <section class="card">
             <h2>Education</h2>
             <table>
@@ -110,9 +80,10 @@
                     <td>2028 (Expected)</td>
                 </tr>
             </table>
-        </section> 
+        </section>
 
-        <button id="toggleSkills">Show/Hide Skills</button>
+        <!-- SKILLS -->
+        <button id="toggleSkills">Show / Hide Skills</button>
 
         <section class="card" id="skillsSection">
             <h2>Skills</h2>
@@ -120,37 +91,27 @@
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
-                <li>Web Development
-                    <ul>
-                        <li>Frontend
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </li>
-                        <li>Backend</li>
-                    </ul>
-                </li>
             </ul>
         </section>
 
+        <!-- CONTACT -->
         <section class="card">
             <h2>Contact Me</h2>
-            <form>
-                <input type="text" id="name" placeholder="Name"> 
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Name">
                 <input type="email" id="email" placeholder="Email">
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit" id="submitBtn">Send</button>
-
+                <textarea id="message" placeholder="Message" rows="5"></textarea>
+                <button type="submit">Send</button>
             </form>
         </section>
-        </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Isaiah Gabrille Bugtong. All rights reserved.</p>
-    </footer>
-    <script src="js/script.js"></script>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Isaiah Gabrille Bugtong. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>

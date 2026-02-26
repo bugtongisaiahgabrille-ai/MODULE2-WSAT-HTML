@@ -1,31 +1,40 @@
-console.log("js/script.js")
+console.log("JS Connected");
 
-const submitBtn = document.getElementById("submitBtn");
-
-submitBtn.addEventListener("submit",function(event){
- event.preventDefault();
- alert("Thank you! Your message has been received.");
-});
-
+/* DARK MODE */
 const themeToggle = document.getElementById("themeToggle");
-themeToggle.addEventListener("click",function(){
- document.body.classList.toggle("dark-mode");
+
+themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "Light Mode";
+    } else {
+        themeToggle.textContent = "Dark Mode";
+    }
 });
 
+/* SHOW / HIDE SKILLS */
 const toggleSkills = document.getElementById("toggleSkills");
 const skillsSection = document.getElementById("skillsSection");
-toggleSkills.addEventListener("click",function(){
- skillsSection.classList.toggle("hidden");
+
+toggleSkills.addEventListener("click", function () {
+    skillsSection.classList.toggle("hidden");
 });
 
-submitBtn.addEventListener("click",function(event){
- event.preventDefault();
- const name = document.getElementById("name").value;
- const email = document.getElementById("email").value;
+/* FORM VALIDATION */
+const form = document.getElementById("contactForm");
 
- if (name===""||email===""){
- alert("Please fill in all required fields.");
- } else{
- alert("Form submitted successfully!");
- }
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all required fields.");
+    } else {
+        alert("Thank you! Your message has been received.");
+        form.reset();
+    }
 });

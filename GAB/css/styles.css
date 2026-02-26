@@ -1,93 +1,132 @@
-/* || Global Styles */
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-body {
-font-family: Arial, sans-serif;
-line-height: 1.6;
-background-color: #f4f4f4;
-padding: 20px;
-}
-.container {
-max-width: 800px;
-margin: 0 auto;
-}
-/* || Card Styling */
-.card {
-background: #ffffff;
-padding: 20px;
-margin-bottom: 20px;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-/* || Typography */
-h1 {
-text-align: center;
-margin-bottom: 10px;
-}
-h2 {
-margin-bottom: 10px;
-margin-top: 20px;
-}
-p {
-margin-bottom: 10px;
-}
-ul {
-margin-left: 20px;
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #0077cc;
-}
-a:hover {
-color: #005fa3;
-}
-table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 10px;
-}
-th, td {
-border: 1px solid #ccc;
-padding: 8px;
-}
-th {
-background-color: #0077cc;
-color: white;
-}
-form {
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-nput, textarea {
-padding: 8px;
-border: 1px solid #ccc;
-border-radius: 4px;
-}
-button {
-padding: 10px;
-background-color: #0077cc;
-color: white;
-border: none;
-cursor: pointer;
-}
-button:hover {
-background-color: #005fa3;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.dark-mode {
- background-color:#222;
- color:black;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* FACEBOOK STYLE PROFILE */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* SPACING BETWEEN GITHUB AND TEXT */
+.github-link {
+    margin-bottom: 20px;   /* creates space below GitHub */
+}
+
+.about-text {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa3;
 }
 
 .hidden {
- display:none;
+    display: none;
 }
-.dark-mode header{
- background-color:#222;
- color:rgb(255, 255, 255);
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .profile-pic {
+    border: 5px solid #1e1e1e;
+}
+
+.dark-mode th {
+    background-color: #333;
 }
