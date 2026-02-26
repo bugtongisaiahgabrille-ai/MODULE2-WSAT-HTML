@@ -1,9 +1,27 @@
 {
   "name": "personal-cv-react",
-  "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/MODULE2-WSAT-HTML",
+  "version": "0.0.0",
+  "type": "module",
+
+  "homepage": "https://bugtongisaiahgabrielle-ai.github.io/MODULE2-WSAT-HTML",
+
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+
   "dependencies": {
-    "gh-pages": "^7.3.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
+    "vite": "^7.3.1",
+    "gh-pages": "^6.1.1"
   }
 }
