@@ -8,6 +8,27 @@ import Contact from "./components/Contact";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+  // Skills data
+  const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    {
+      name: "Web Development",
+      subSkills: ["Frontend", "Backend"]
+    }
+  ];
+
+  // Education data
+  const education = [
+    { year: "2012", program: "Kindergarten", school: "Macasandig Elementary School" },
+    { year: "2018", program: "Elementary", school: "Macasandig Elementary School" },
+    { year: "2021", program: "Junior High School", school: "Macasandig National High School" },
+    { year: "2024", program: "Senior High School", school: "PHINMA Cagayan de Oro College" },
+    { year: "2028", program: "College", school: "USTP – CDO Campus" }
+  ];
+
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add("dark");
@@ -26,8 +47,8 @@ function App() {
 
       <Header />
       <About />
-      <Skills />
-      <Education />
+      <Skills skills={skills} />
+      <Education education={education} />
       <Contact />
     </>
   );
