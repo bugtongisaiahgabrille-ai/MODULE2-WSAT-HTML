@@ -29,7 +29,6 @@ header {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* FACEBOOK STYLE PROFILE */
 .profile-container {
     display: flex;
     justify-content: center;
@@ -50,9 +49,9 @@ header {
     transform: scale(1.05);
 }
 
-/* SPACING BETWEEN GITHUB AND TEXT */
+
 .github-link {
-    margin-bottom: 20px;   /* creates space below GitHub */
+    margin-bottom: 20px;  
 }
 
 .about-text {

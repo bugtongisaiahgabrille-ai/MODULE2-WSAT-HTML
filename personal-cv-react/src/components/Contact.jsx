@@ -1,20 +1,23 @@
 import { useState } from "react";
 
 function Contact() {
-  const [message, setMessage] = useState(""); // to display feedback message
-
+  // We no longer need the 'message' state if we use window alerts
+  
   const handleSubmit = (e) => {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault(); 
 
     const name = e.target.name.value.trim();
     const email = e.target.email.value.trim();
     const messageText = e.target.message.value.trim();
 
     if (!name || !email || !messageText) {
-      setMessage("Please fill all fields");
+      // This creates the pop-up box shown in your image
+      window.alert("Please fill all fields");
     } else {
-      setMessage("The message has been sent");
-      // Optionally clear the form
+      // This creates the pop-up box shown in your image
+      window.alert("The message has been sent");
+      
+      // Clear the form fields after successful "send"
       e.target.reset();
     }
   };
@@ -28,7 +31,6 @@ function Contact() {
         <textarea id="message" name="message" placeholder="Message"></textarea>
         <button type="submit" id="submitBtn">Send</button>
       </form>
-      {message && <p>{message}</p>}
     </section>
   );
 }
