@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 function Contact() {
-  // We no longer need the 'message' state if we use window alerts
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault(); 
 
     const name = e.target.name.value.trim();
@@ -11,14 +10,28 @@ function Contact() {
     const messageText = e.target.message.value.trim();
 
     if (!name || !email || !messageText) {
-      // This creates the pop-up box shown in your image
       window.alert("Please fill all fields");
-    } else {
-      // This creates the pop-up box shown in your image
-      window.alert("The message has been sent");
-      
-      // Clear the form fields after successful "send"
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost/cv-api/process.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name })
+      });
+
+      const data = await res.json();
+
+      window.alert(data.message); // shows "Data saved successfully"
+
       e.target.reset();
+
+    } catch (error) {
+      console.error(error);
+      window.alert("Error connecting to server");
     }
   };
 
